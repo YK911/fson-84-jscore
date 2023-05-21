@@ -11,7 +11,20 @@
 // Реалізуте перевірку, що у prompt() введено значення, в інакшому випадку
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
+function letMeSeeYourName(callback) {
+  const name = prompt("Введіть ваше ім'я:");
+  if (name) {
+    callback(name);
+  } else {
+    console.log("Ви не ввели ім'я");
+  }
+}
 
+function greet(name) {
+  console.log(`Привіт, ${name}!`);
+}
+
+letMeSeeYourName(greet);
 /**
   |============================
   | Завдання 2
@@ -26,7 +39,24 @@
 // 2. showProduct(product) - коллбек, який приймає об'єкт
 // продукту і виводить інформацію у консоль
 //++++++++++++++++++ Рішення ++++++++++++++++++++++++
+function makeProduct(name, price, callback) {
+  const id = new Date().getTime();
+  const product = {
+    id: id,
+    name: name,
+    price: price
+  };
+  callback(product);
+}
 
+function showProduct(product) {
+  console.log(`Інформація про товар:
+  ID: ${product.id}
+  Назва: ${product.name}
+  Ціна: ${product.price}`);
+}
+
+makeProduct("Монітор", 200, showProduct);
 /**
   |============================
   | Завдання 3
@@ -45,6 +75,16 @@
 // makeDish("Poly", "muffins");
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+
+const makeShef = function (shefName) {
+  return function makeDish(dish) {
+    console.log(`${shefName} готує ${dish}`);
+  };
+};
+const mangoShef = makeShef("Mango");
+const polyShef = makeShef("Poly");
+mangoShef("яблучний пиріг");
+polyShef("м'яфкі кекси");
 /**
   |============================
   | Завдання 4
