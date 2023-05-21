@@ -13,6 +13,27 @@
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+function letMeSeeYourName() {
+  const result = prompt("Your name?");
+  if (result) {
+    greet(result);
+    return;
+  } else if (result === null) {
+    return;
+  }
+      {
+    return console.log("Ви не ввели ім'я");
+  }
+}
+
+function greet(name) {
+  console.log(`Привіт ${name}`);
+}
+
+letMeSeeYourName();
+// greet();
+// console.log(result)
+
 /**
   |============================
   | Завдання 2
