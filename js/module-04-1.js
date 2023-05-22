@@ -115,7 +115,6 @@
 // return newArray;
 // }
 
-// console.log(each([2, 3, 5, 34, 21, 100], eachResult));
 
 /**
   |============================
