@@ -1,7 +1,7 @@
 /**
  * Test
   |============================
-  | Завдання 1
+  | Завдання 1  +++
   |============================
 */
 // Напишіть дві функції
@@ -13,30 +13,33 @@
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
-function letMeSeeYourName() {
-  const result = prompt("Your name?");
-  if (result) {
-    greet(result);
-    return;
-  } else if (result === null) {
-    return;
-  }
-      {
-    return console.log("Ви не ввели ім'я");
-  }
-}
+// function letMeSeeYourName(callback) {
 
-function greet(name) {
-  console.log(`Привіт ${name}`);
-}
+//   const result = prompt("Your name?");
+//   if (result) {
+//     callback(result);
+//     return;
+//   } else if (result === null) {
+//     return;
+//   }
+//       {
+//     return console.log("Ви не ввели ім'я");
+//   }
 
-letMeSeeYourName();
-// greet();
-// console.log(result)
+// }
+
+// function greet(name) {
+//   console.log(`Привіт ${name}`);
+// }
+
+// letMeSeeYourName(greet);
+// // greet();
+// // console.log(greet);
+// // greet("Mango");
 
 /**
   |============================
-  | Завдання 2
+  | Завдання 2  +++
   |============================
 */
 // Напишіть дві функції:
@@ -48,6 +51,22 @@ letMeSeeYourName();
 // 2. showProduct(product) - коллбек, який приймає об'єкт
 // продукту і виводить інформацію у консоль
 //++++++++++++++++++ Рішення ++++++++++++++++++++++++
+
+// function makeProduct(name, price, callback) {
+//   const prodactObject = {
+//     id: new Date().getTime(),
+//     name,
+//     price,
+//   };
+//   callback(prodactObject);
+// }
+
+// function showProduct(prodact) {
+//   console.log(prodact);
+// }
+
+
+// makeProduct("Apple", 300, showProduct);
 
 /**
   |============================
@@ -69,7 +88,7 @@ letMeSeeYourName();
 
 /**
   |============================
-  | Завдання 4
+  | Завдання 4  +++
   |============================
 */
 // Напишіть функцію each(array, callback)
@@ -82,6 +101,21 @@ letMeSeeYourName();
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення ++++++++++++++++++
+
+// function each(array, callback) {
+//   const result = callback(array);
+//   return result;
+// }
+
+// function eachResult(numbers) {
+// const newArray = [];
+// for (let number of numbers) {
+//   newArray.push( number * 2 );
+// }
+// return newArray;
+// }
+
+// console.log(each([2, 3, 5, 34, 21, 100], eachResult));
 
 /**
   |============================
