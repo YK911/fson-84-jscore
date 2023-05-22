@@ -65,7 +65,6 @@
 //   console.log(prodact);
 // }
 
-
 // makeProduct("Apple", 300, showProduct);
 
 /**
@@ -108,13 +107,14 @@
 // }
 
 // function eachResult(numbers) {
-// const newArray = [];
-// for (let number of numbers) {
-//   newArray.push( number * 2 );
-// }
-// return newArray;
+//   const newArray = [];
+//   for (let number of numbers) {
+//     newArray.push(number * 2);
+//   }
+//   return newArray;
 // }
 
+// console.log(each([1, 3, 5, 9, 12, 35], eachResult));
 
 /**
   |============================
