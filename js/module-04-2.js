@@ -1,7 +1,7 @@
 import users from "./db.js";
 /**
   |============================
-  | Завдання 1
+  | Завдання 1 +++
   |============================
 */
 // Отримати масив імен всіх користувачів (поле name).
@@ -9,24 +9,53 @@ import users from "./db.js";
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getUserNames(users) {
+
+//   const userName = users.map(user => user.name);
+//   return userName;
+// }
+
+// //const getUserNames = (users) => users.map(user => user.name);
+
+// console.log(getUserNames(users))
+
+
 /**
   |============================
-  | Завдання 2
+  | Завдання 2 +++
   |============================
 */
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// // function getUsersWithEyeColor(users, color) {
+// //   const userEyesColor = users.filter(user => user.eyeColor === color);
+// //   return userEyesColor;
+// // }
+
+// const getUsersWithEyeColor = (users, color) => users.filter(user => user.eyeColor === color);
+
+// console.log(getUsersWithEyeColor(users, 'blue'))
+
 /**
   |============================
-  | Завдання 3
+  | Завдання 3 +++
   |============================
 */
 // Отримати масив імен користувачів за статтю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getUsersWithGender(users, gender) {
+//   const userGender = users.filter(user => user.gender === gender);
+//   return userGender;
+// }
+
+// const getUsersWithGender = (users, gender) => users.filter(user => user.gender === gender);
+
+
+// console.log(getUsersWithGender(users, 'male'))
 /**
   |============================
   | Завдання 4
