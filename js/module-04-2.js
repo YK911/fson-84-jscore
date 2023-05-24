@@ -219,7 +219,7 @@ import users from "./db.js";
 
 /**
   |============================
-  | Завдання 13
+  | Завдання 13  +++
   |============================
 */
 // Необхідно написати функцію isEqualSymbols(), що приймає в аргументах два рядки
@@ -229,9 +229,20 @@ import users from "./db.js";
 // console.log(isEqualSymbols("кіт", "тік")); // результат true
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function isEqualSymbols(str1, str2) {
+
+// const result = [...str2].every((elem) => str1.includes(elem));
+
+// return result;
+// }
+
+// console.log(isEqualSymbols("GOOD", "GODO"));
+// console.log(isEqualSymbols("кіт", "струм"));
+// console.log(isEqualSymbols("кіт", "тік"));
+
 /**
   |============================
-  | Завдання 14
+  | Завдання 14  +++
   |============================
 */
 // Сортування примітивів.
@@ -239,9 +250,12 @@ import users from "./db.js";
 const prices = [1000, 240, 670, 360, 89, 20];
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// const result = [...prices].sort((a, b) => a - b );
+// console.log(result);
+
 /**
   |============================
-  | Завдання 15
+  | Завдання 15 +++
   |============================
 */
 // Сортування рядків.
@@ -249,9 +263,16 @@ const prices = [1000, 240, 670, 360, 89, 20];
 const monitors = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ", "ASER"];
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// const ascendingResult = [...monitors].sort((firstEl, secondEl) => firstEl.localeCompare(secondEl));
+
+// const descendingResult = [...monitors].sort((firstEl, secondEl) => secondEl.localeCompare(firstEl));
+
+// console.log(ascendingResult);
+// console.log(descendingResult);
+
 /**
   |============================
-  | Завдання 16
+  | Завдання 16 +++
   |============================
 */
 // Сортування складних типів
@@ -267,9 +288,22 @@ const items = [
 ];
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// const ascendingPrice = [...items].sort((firstEl, secondEl) => firstEl.price - secondEl.price);
+
+// const descendingPrice = [...items].sort((firstEl, secondEl) => secondEl.price - firstEl.price);
+
+// const ascendingName = [...items].sort((firstEl, secondEl) => firstEl.name.localeCompare(secondEl.name));
+
+// const descendingName = [...items].sort((firstEl, secondEl) => secondEl.name.localeCompare(firstEl.name));
+
+// console.table(ascendingPrice);
+// console.table(descendingPrice);
+// console.table(ascendingName);
+// console.table(descendingName);
+
 /**
   |============================
-  | Завдання 17
+  | Завдання 17 +++
   |============================
 */
 // Зібрати в allTopics масив всіх предметів всіх курсів
@@ -303,6 +337,10 @@ const courses = [
   },
 ];
 //++++++++++++++++++ Рішення ++++++++++++++++++
+
+// const allTopics = courses.flatMap(course => course.topics).filter((element, index, array) => array.indexOf(element) === index);
+
+// console.log(allTopics);
 
 /**
   |============================
