@@ -58,16 +58,19 @@ import users from "./db.js";
 // console.log(getUsersWithGender(users, 'male'))
 /**
   |============================
-  | Завдання 4
+  | Завдання 4  +++
   |============================
 */
 // Отримати масив тільки неактивних користувачів (поле є активним).
 // console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// const getInactiveUsers = (users) => users.filter(user => !user.isActive);
+// console.table(getInactiveUsers(users))
+
 /**
   |============================
-  | Завдання 5
+  | Завдання 5 +++
   |============================
 */
 // Отримати користувача (не масив) по email (поле email, він унікальний).
@@ -75,9 +78,16 @@ import users from "./db.js";
 // console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getUserWithEmail(users, email) {
+//   const userEmail = users.find(users => users.email === email);
+//   return userEmail.name;
+// }
+// console.log(getUserWithEmail(users, 'shereeanthony@kog.com'))
+// console.log(getUserWithEmail(users, 'elmahead@omatom.com'))
+
 /**
   |============================
-  | Завдання 6
+  | Завдання 6  +++
   |============================
 */
 // Отримати масив користувачів віком від min до max
@@ -87,18 +97,33 @@ import users from "./db.js";
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getUsersWithAge(user, min, max) {
+//   const usersAge = users.filter(user => user.age >= min && user.age <= max);
+//   return usersAge;
+// }
+
+// console.log (getUsersWithAge(users, 20, 30))
+// console.log (getUsersWithAge(users, 30, 40))
+
 /**
   |============================
-  | Завдання 7
+  | Завдання 7  +++
   |============================
 */
 // Отримати загальну суму балансу (поле balance) всіх користувачів.
 // console.log(calculateTotalBalance(users)); // 20916
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function calculateTotalBalance(users){
+//   let totalBalance = 0;
+//   const usersBalance = users.map(user => totalBalance += user.balance);
+//   return totalBalance;
+// }
+// console.log(calculateTotalBalance(users))
+
 /**
   |============================
-  | Завдання 8
+  | Завдання 8  +++
   |============================
 */
 // Отримати масив імен всіх користувачів, які мають одиного друга із зазначеним ім'ям.
@@ -106,9 +131,19 @@ import users from "./db.js";
 // console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getUsersWithFriend(users, friend) {
+//   const usersFriend = users.filter(user => user.friends.includes(friend))
+//   .map(user => user.name);
+
+//   return usersFriend;
+// }
+
+// console.log(getUsersWithFriend(users, 'Briana Decker'));
+// console.log(getUsersWithFriend(users, 'Goldie Gentry'));
+
 /**
   |============================
-  | Завдання 9
+  | Завдання 9  +++
   |============================
 */
 // Отримати масив імен (поле name) людей, відсортованих залежно від кількості їх друзів (поле friends)
@@ -116,9 +151,17 @@ import users from "./db.js";
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getNamesSortedByFriendCount(users) {
+//   const sortedByFruends = [...users].sort((firstUser, secondUser) => firstUser.friends.length - secondUser.friends.length).map(user => user.name);
+//   return sortedByFruends;
+// }
+// console.log(getNamesSortedByFriendCount(users));
+// console.log(users);
+// console.log(sortedByFruends);
+
 /**
   |============================
-  | Завдання 10
+  | Завдання 10  +++
   |============================
 */
 // Отримати масив всіх умінь всіх користувачів (поле skills), при цьому не повинно бути
@@ -127,9 +170,18 @@ import users from "./db.js";
 // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam']
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function getAllUsersSkills(users){
+//   const usersSkills = users.flatMap(user => user.skills)
+//   .filter((user, index, array) => array.indexOf(user) === index)
+//   .sort((a, b) => a.localeCompare(b));
+
+// return usersSkills;
+// }
+// console.log(getAllUsersSkills(users));
+
 /**
   |============================
-  | Завдання 11
+  | Завдання 11 +++
   |============================
 */
 // Напишіть функцію compact(), яка очищає масив від небажаних значень,
@@ -138,15 +190,32 @@ import users from "./db.js";
 // console.log(compact(data)); // [1, 2, 3]
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function compact(data) {
+//   const comp = [0, 1, false, 2, undefined, "", 3, null];
+//   const result = data.filter(element => element );
+//   return result;
+
+// }
+// const data = [0, 1, false, 2, undefined, "", 3, null];
+// console.log(compact(data));
+
 /**
   |============================
-  | Завдання 12
+  | Завдання 12  +++
   |============================
 */
 // Напишіть функцію without(), яка повертає новий масив без наданих значень. Використовуйте примітивні типи.
 // const data = [1, 2, 3, 4, 1, 2];
 // console.log(without(data, 1, 2)); // [3, 4]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+
+// function without(data, a, b) {
+//   const result = data.filter(element => element !== a && element !== b);
+
+//   return result;
+// }
+// const data = [1, 2, 3, 4, 1, 2];
+// console.log(without(data, 1, 2));
 
 /**
   |============================
