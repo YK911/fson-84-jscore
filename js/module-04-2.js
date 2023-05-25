@@ -231,7 +231,7 @@ import users from "./db.js";
 
 // function isEqualSymbols(str1, str2) {
 
-// const result = [...str2].every((elem) => str1.includes(elem));
+// const result = [...str2].every((elem) => str1.includes(elem)) && [...str1].every((elem) => str2.includes(elem));
 
 // return result;
 // }
@@ -344,18 +344,27 @@ const courses = [
 
 /**
   |============================
-  | Завдання 18
+  | Завдання 18 +++
   |============================
 */
 // Призначити знижку 20% на фрукти в масиві,
 // Присвоїти ID для кожного продукту
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
-//++++++++++++++++++ Рішення ++++++++++++++++++
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+// //++++++++++++++++++ Рішення ++++++++++++++++++
+
+// const addIdfruits = fruits.map(fruit => fruit.id = Math.random());
+
+// const discountFruits = fruits.map(fruit => fruit.price - (fruit.price / 100 * 20));
+
+
+// console.log(fruits);
+// // console.log(addIdfruits);
+// console.log(discountFruits);
 
 /**
   |============================
