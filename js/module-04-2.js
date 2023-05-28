@@ -387,7 +387,8 @@ const tweets = [
 //   return countTags;
 // }
 
-// console.log(tags(tweets))
+
+// console.log(getTagStats(tweets))
 
 
 /**
@@ -435,9 +436,22 @@ const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
 
 /**
   |============================
-  | Завдання 23
+  | Завдання 23  +++
   |============================
 */
 // Знайти унікальні елементи за допомогою reduce
 const numbers = [1, 9, 0, 1, 5, 9, 1, 6];
 //++++++++++++++++++ Рішення ++++++++++++++++++
+
+// function uniqalNumbers(numbers) {
+//   const result = [];
+//    numbers.reduce( (accum, number, index, array) => {
+//       if (array.indexOf(number) === index ) {
+//         result.push(number);
+//       }
+      
+//    }, 0)
+//    return result;
+//   };
+
+// console.log(uniqalNumbers(numbers));
