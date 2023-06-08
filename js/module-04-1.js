@@ -12,6 +12,23 @@
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function greet(name) {
+//   if (name) {
+//     console.log(`Привіт ${name}`);
+//     return;
+//   }
+
+//   console.log(`Ви не ввели імʼя`);
+// }
+
+// function letMeSeeYourName(callback) {
+//   // callback = function greet(){}
+//   const result = prompt("Введіть ваше імʼя");
+//   callback(result);
+// }
+
+// letMeSeeYourName(greet);
+
 /**
   |============================
   | Завдання 2
@@ -26,6 +43,20 @@
 // 2. showProduct(product) - коллбек, який приймає об'єкт
 // продукту і виводить інформацію у консоль
 //++++++++++++++++++ Рішення ++++++++++++++++++++++++
+const makeProduct = (name, price, callback) => {
+  const product = {
+    id: new Date().getTime(),
+    name,
+    price,
+  };
+
+  callback(product);
+};
+const showProduct = (qwe) => {
+  console.log(qwe);
+};
+
+makeProduct("Fish", 350, showProduct);
 
 /**
   |============================
