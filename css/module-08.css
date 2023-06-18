@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #444;
+}
+
+h1 {
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+}
+
+.block {
+  width: 75px;
+  height: 75px;
+  margin: 25px;
+  border: 2px solid #333;
+}
+
+.active {
+  background: orange;
+}
+
+.hide {
+  display: none;
+}
+
+.back-btn {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.back-btn svg {
+  transform: rotate(-180deg);
+  fill: white;
+}
