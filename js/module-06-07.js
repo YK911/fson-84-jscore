@@ -5,13 +5,33 @@
 з поля введення (дивіться на елементи в html-розмітці)
 */
 
+// const buttonEl = document.querySelector("#alertButton");
+
+// // console.log(buttonEl);
+
+// buttonEl.addEventListener('click', () => {
+//     // console.log('heare');
+//     // const imputValue = document.querySelector("#alertInput").value;
+//     // console.log(imputValue)
+//     console.log(buttonEl.nextElementSibling)
+// })
+
 //TODO:==============================================
 /*
 Завдання 2
 Після натискання кнопки "Swap me" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+// const buttonEl = document.querySelector("#swapButton");
 
+// buttonEl.addEventListener('click', () => {
+//     const firstInput = document.querySelector("#leftSwapInput");
+//     const secondInput = document.querySelector("#rightSwapInput");
+//     let temp = firstInput.value;
+//     firstInput.value = secondInput.value;
+//     secondInput.value = temp;
+
+// })
 //TODO:==============================================
 /*
 Завдання 3
@@ -20,11 +40,43 @@
 і кнопка набуває початкового вигляду.
 */
 
+// const buttonEl = document.querySelector("#passwordButton");
+
+// buttonEl.addEventListener('click', () => {
+//     const inputEl = document.querySelector("#passwordInput");
+    
+//     const typeEl = inputEl.getAttribute('type')
+//     const toggleType = typeEl === 'password' ? 'text' : 'password';
+//     inputEl.setAttribute("type", toggleType);
+   
+//     event.target.textContent = typeEl === "password" ? "Приховати" : "Розкрити";
+//     // buttonEl.textContent = typeEl === "password" ? "Приховати" : "Розкрити";
+
+// })
+
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Decrease" робить квадрат менше на 10 пікселів, кнопка "Increase" - більше на 10 пікселів. Використай інструкцію switch
 */
+// const btnDecrEl = document.querySelector("#decrease");
+// const btnIncrEl = document.querySelector("#increase");
+// const boxEl = document.querySelector("#box");
+
+// btnDecr.addEventListener('click', () => {
+//     const width = boxEl.offsetWidth;
+//     const height = boxEl.offsetHeight;
+//     boxEl.style.width = `${width - 10}px`;
+//     boxEl.style.height = `${height - 10}px`;
+//  });
+// btnDecr.addEventListener('click', () => {
+//      const width = boxEl.offsetWidth;
+//      const height = boxEl.offsetHeight;
+//      boxEl.style.width = `${width + 10}px`;
+//      boxEl.style.height = `${height + 10}px`;
+// });
+
+
 
 //TODO:==============================================
 /*
@@ -38,6 +90,13 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
 
 //TODO:==============================================
+const placeEl = document.querySelector()
+
+window.addEventListener('click', (event) => {
+    
+})
+
+
 /*
 Завдання 6
 Натиснувши кнопку "Double", збільшити значення

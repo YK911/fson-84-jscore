@@ -12,6 +12,23 @@
 // виведіть в консоль повідомлення "Ви не ввели імʼя"
 //++++++++++++++++++ Рішення ++++++++++++++++++
 
+// function greet(name) {
+//   if (name) {
+//     console.log(`Привіт ${name}`);
+//     return; 
+//   } 
+
+//   console.log("Ви не ввели ім'я")
+// }
+
+// // greet('Oleg')
+
+// function letMeSeeYourName(callback) {
+//   const result = prompt("Введіть ваше ім'я");
+//   callback(result);
+// }
+// letMeSeeYourName(greet);
+
 /**
   |============================
   | Завдання 2
@@ -27,6 +44,18 @@
 // продукту і виводить інформацію у консоль
 //++++++++++++++++++ Рішення ++++++++++++++++++++++++
 
+// const makeProduct = (name, price, callback) => {
+//   const product = {
+//     id: new Date().getTime(),
+//     name,
+//     price
+//   };
+//   callback(product);
+// };
+// const showProduct = (qwe) => { 
+//   console.log(qwe)
+// };
+// makeProduct('fish', 350, showProduct);
 /**
   |============================
   | Завдання 3
@@ -39,12 +68,19 @@
 
 // const makeDish = function (shefName, dish) {
 // console.log(`${shefName} is cooking ${dish}`);
-//};
+// };
+
+
+// //++++++++++++++++++ Рішення ++++++++++++++++++
+
+// const makeShef = (shefName) => {
+//   return function makeDish(dish) {
+//     console.log(`${shefName} is cooking ${dish}`);
+//   }
+// };
 
 // makeDish("Mango", "apple pie");
 // makeDish("Poly", "muffins");
-//++++++++++++++++++ Рішення ++++++++++++++++++
-
 /**
   |============================
   | Завдання 4
@@ -60,6 +96,27 @@
 //  - за допомогою function declaration
 //  - за допомогою arrow function
 //++++++++++++++++++ Рішення ++++++++++++++++++
+// const numbers = [1, 6, 42, 80];
+
+// function mult(el) {
+//   return el * 2;
+// }
+
+// function each(array, callback) {
+//   const newArray = [];
+
+//   for (const number of numbers) {
+//     newArray.push(callback(number));
+//     // callback(number);
+//   }
+//   return newArray
+// };
+
+// each(numbers, mult);
+
+
+
+
 
 /**
   |============================

@@ -8,6 +8,9 @@ import users from "./db.js";
 // console.log(getUserNames(usersData))
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+const getUserNames = (usersData) => {
+ return usersData.map(user => user.name)
+};
 
 /**
   |============================
@@ -17,6 +20,7 @@ import users from "./db.js";
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 //++++++++++++++++++ Рішення ++++++++++++++++++
+
 
 /**
   |============================
